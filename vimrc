@@ -61,6 +61,8 @@ set list listchars=tab:»·,trail:·,nbsp:·
 
 " Use one space, not two, after punctuation.
 set nojoinspaces
+scriptencoding utf-8
+set encoding=utf-8
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
