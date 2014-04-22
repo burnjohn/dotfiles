@@ -1,14 +1,37 @@
 # Unix
-alias ll="ls -al"
-alias ln="ln -v"
-alias mkdir="mkdir -p"
+alias tlf="tail -f"
+alias ln='ln -v'
+alias mkdir='mkdir -p'
+alias ...='../..'
+alias l='ls -l'
+alias ll='ls -al'
+alias lh='ls -Alh'
+alias -g G='| grep'
+alias -g M='| less'
+alias -g L='| wc -l'
+alias -g ONE="| awk '{ print \$1}'"
 alias e="$EDITOR"
 alias v="$VISUAL"
+
+# git
+alias gci="git pull --rebase && rake && git push"
+alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
+alias ghistory='git log --follow -p'
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr     ) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gst='git status -sb'
 
 # Bundler
 alias b="bundle"
 
+# Bower
+alias bower='noglob bower'
+
+# Tests and Specs
+alias t="ruby -I test"
+alias cuc="bundle exec cucumber"
+
 # Rails
+alias rake="noglob rake"
 alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
 alias s="rspec"
 
