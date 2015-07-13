@@ -13,8 +13,11 @@ alias -g ONE="| awk '{ print \$1}'"
 alias e="$EDITOR"
 alias v="$VISUAL"
 
+# ctags
+alias ctags="`brew --prefix`/bin/ctags"
+
 # git
-alias gci="git pull --rebase && rake && git push"
+alias gci="git pull --rebase && git push"
 alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 alias ghistory='git log --follow -p'
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr     ) %C(bold blue)<%an>%Creset' --abbrev-commit"
@@ -30,13 +33,19 @@ alias bower='noglob bower'
 alias t="ruby -I test"
 alias cuc="bundle exec cucumber"
 
+# Pretty print the path
+alias path='echo $PATH | tr -s ":" "\n"'
+
 # Rails
 alias rake="noglob rake"
 alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
 alias s="rspec"
+alias z="zeus"
+alias aar="rails generate active_admin:resource"
 
-# Pretty print the path
-alias path='echo $PATH | tr -s ":" "\n"'
+# Heroku
+alias heroku_prod="gp production master && heroku run rake db:migrate --remote production && heroku restart --remote production"
+alias heroku_stg="gp staging master && heroku run rake db:migrate --remote staging && heroku restart --remote staging"
 
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
