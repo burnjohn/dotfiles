@@ -17,11 +17,12 @@ alias v="$VISUAL"
 alias ctags="`brew --prefix`/bin/ctags"
 
 # git
-alias gci="git pull --rebase && git push"
+alias gci="git pull --rebase -i"
 alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 alias ghistory='git log --follow -p'
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr     ) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gst='git status -sb'
+alias gcd='git checkout develop'
 
 # Bundler
 alias b="bundle"
