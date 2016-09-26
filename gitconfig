@@ -51,7 +51,7 @@
 [help]
   autocorrect = 1
 [merge]
-  ff = only
+  # ff = only
 [rebase]
   autosquash = true
 [include]
